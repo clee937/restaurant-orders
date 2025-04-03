@@ -4,7 +4,7 @@
 
 Restaurant Orders is a program that filters restaurant orders based on a price bracket specified by the user. The project focuses on TypeScript functions and the use of custom types such as type aliases and enums to annotate more complex data structures.
 
-# Features and code breakdown
+## Features and code breakdown
 
 - A `PriceBracket` **enum** is used to limit the possible values of the **variable** and reduce the chances of error.
 - The `getMaxPrice()` **function** uses the value of the `PriceBracket` **enum** together with a **switch statement** to return the maximum price that an order should be filtered for.
