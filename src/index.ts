@@ -16,7 +16,7 @@ const getMaxPrice = (price: PriceBracket): number => {
 };
 
 // Function to filter the orders from each restaurant that cost below the maximum price
-const getOrders = (price: number, orders: Order[][]): Order[][] => {
+const getOrders = (price: PriceBracket, orders: Order[][]): Order[][] => {
   let filteredOrders: Order[][] = [];
 
   orders.forEach((restaurant) => {
