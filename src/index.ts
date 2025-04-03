@@ -28,5 +28,16 @@ const getOrders = (price: number, orders: Order[][]): Order[][] => {
   return filteredOrders;
 };
 
+// Function to format the results and print in a user-friendly format
+const printOrders = (restaurants: Restaurant[], orders: Order[][]) => {
+  orders.forEach((order, index) => {
+    if (order.length > 0) {
+      console.log(`\n ${restaurants[index].name}`);
+      order.forEach((item) => console.log(`- ${item.name}: $${item.price}`));
+    }
+  });
+  console.log("");
+};
+
 const eligibleOrders = getOrders(PriceBracket.Low, orders);
-console.log(eligibleOrders);
+printOrders(restaurants, eligibleOrders);
